@@ -1,54 +1,87 @@
-
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 
 
 body {
     background-color: #110B0B;
     color: #f00;
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    display: flex;
+    flex-direction: column; /* Organiza header e main em colunas */
     overflow: hidden;
+    
 }
-header{
-    height: 81px;
-}
-h1{
-    color: #EF3C3C;
-    font-family: "Aboreto", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
 
+header {
+    height: 100%;
+    background-color: #690A0A;
 }
-p{
-    color: white;
-    
-    
-    text-align: center;
-}
+
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: end;
-    background-color: #690A0A;
+    justify-content: flex-end;
+    
     padding: 10px;
-    gap: 100px;
-
+    
 }
+
 nav a {
     color: black;
-    font-weight: bolder;
+    font-size: 20px;
+    font-weight: bold;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 50px;
+    gap: 100px;
+    padding: 10px;
 }
-section{
-    display: flex; /* Ativa o Flexbox */
-    align-items: flex-start; /* Alinha os itens na parte superior */
+
+nav a:hover{
+    color: white;
+}
+
+main {
+    flex-grow: 1; /* Permite que o main cresça e ocupe o espaço restante */
+    display: flex;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding-left: 50px; /* Distância da borda esquerda */
+}
+
+#container {
+    display: flex;
+    flex-direction: column; /* Coloca o título acima do parágrafo */
+    justify-content: center; /* Centraliza verticalmente */
+    margin-bottom: 200px;
+    margin-left: 100px;
+}
+
+#titulo {
+    color: #EF3C3C;
+    font-family: "Aboreto", system-ui;
+    font-size: 48px;
+    margin-bottom: 37px;/* Espaçamento de 5px entre título e parágrafo */
+    text-align: center; 
+    
 
 }
 
+p {
+    color: white;
+    font-family: "Aboreto", system-ui;
+    font-size: 24px;
+    text-align: center;
+     /* Limita a largura do parágrafo */
 
+    
+    
+}
+
+img{
+    width: 1001px;
+    height: 1061px;
+}
